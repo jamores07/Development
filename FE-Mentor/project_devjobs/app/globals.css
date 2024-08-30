@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        font-size: 1.75rem;
+        font-weight: bold;
+        line-height: 2.125rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.813rem;
+    }
+    h3 {
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+    h4 {
+        font-size: 0.875rem;
+        font-weight: bold;
+        line-height: 1.125rem;
+    }
+
+    body {
+        font-size: 1rem;
+        line-height: 1.625rem;
+        background-color: #f4f6f8;
+    }
+}
+
+/* custom checkbox */
+input[type='checkbox'] {
+    display: none;
+}
+
+input[type='checkbox'] + label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 16px;
+}
+
+input[type='checkbox'] + label span {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #19202d;
+}
+
+input[type='checkbox'] + label .checkbox > svg {
+    display: none;
+}
+
+input[type='checkbox']:hover + label .checkbox {
+    background: #5964e0;
+    opacity: 0.25;
+}
+
+input[type='checkbox']:checked + label .checkbox {
+    background: #5964e0;
+    opacity: 1;
+}
+
+input[type='checkbox']:checked + label .checkbox > svg {
+    display: block;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background: #19202d;
+    opacity: 0.1;
+    border-radius: 3px;
+}
+
+/* ordered list styling for job description page */
+ol {
+    counter-reset: item;
+    list-style-type: none;
+}
+ol > li {
+    display: flex;
+}
+ol > li:before {
+    content: counter(item) '';
+    counter-increment: item;
+    color: #5964e0;
+    font-weight: 700;
+    padding-right: 36px;
+}
+
+.jobLink:hover .position {
+    color: #6e8098;
+}
+
+/* ocoto-corner for top right of page to link to github repository */
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+        transform: rotate(10deg);
+    }
+}
+
+.github-corner svg {
+    fill: #151513;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+}
+
+.dark .github-corner svg {
+    fill: #fff;
+    color: black;
+}
+
+.octo-arm {
+    transform-origin: 130px 106px;
+}
+
+@media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+        animation: none;
+    }
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+    }
+}
