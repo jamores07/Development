@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/rock-paper-scissor-game-using-nextjs-ygvHMV1Hgi)
--   Live Site URL: [Rock, Paper, Scissors](https://project-rps-six.vercel.app/)
+-   Live Site URL: [Rock, Paper, Scissors](https://fm-project-rps.vercel.app)
 
 ### Built with
 
